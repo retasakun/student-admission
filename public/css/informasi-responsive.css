@@ -1,0 +1,92 @@
+
+@media  (max-width: 1000px ){
+    nav h1{
+        font-size:medium;
+    }
+
+    #nav-options{
+        width: 60%;
+    }
+
+    #nav-options {
+        display: none;
+    }
+
+
+}
+
+@media  (max-width: 800px ){
+    nav {
+        padding: 1rem 1rem;
+    }
+}
+
+@media  (max-width: 600px ){
+    #welcome{
+        padding: 0rem;
+        background-position: 50% 0;
+    }
+
+    /* #nav-brand{
+        display: grid;
+        grid-template-areas: 
+        "kem cam man"
+        "brand brand brand";
+        width: 30%;
+    } */
+
+    nav {
+        padding: 0.5rem 0.5rem;
+    }
+
+    
+
+    #nav-brand h1{
+        font-size: medium;
+    }
+
+    #nav-options{
+        display: none;
+    }
+
+    #welcome img{
+        width: 5rem;
+    }
+
+    #welcome > div >h1 {
+        font-size: x-large;
+    }
+    
+    #welcome #masuk, #welcome #masuk-belum{
+        font-size: larger;
+    }
+
+    .persyaratan{
+        padding: 4rem 2rem;
+    }
+    
+    .persyaratan .sec-title{
+        font-size: larg;
+    }
+
+    #tata-cara-seleksi{
+        padding: 3rem 2rem;
+    }
+
+    #jadwal{
+        padding: 5rem 0;
+    }
+    
+    #prosedur{
+        padding: 4rem 2rem;
+    }
+
+    #kontak{
+        padding: 3rem;
+    }
+
+    .sec-content{
+        width: 95%;
+    }
+
+}

@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@300;500&display=swap');
+
+:root{
+    --primary-color : #23adaf;
+    --secondary-color : #116392;
+    --bg-color : #d9f8f8;
+}
+
+body{
+    background-image: url(../assets/bg-batik-light.png);
+    background-size: 50%;
+    background-repeat: repeat;
+}
+
+#page{
+    width: 100vw;
+    height: fit-content;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#page #maskot{
+    width: 400px;
+    height: 400px;
+}
+
+#daftar-form{
+    display: grid;
+    grid-template-areas: 
+    "logo logo logo logo logo"
+    "caption caption caption caption caption"
+    "nama nama nama nama nama"
+    "kode telepon telepon telepon telepon"
+    "no-warn no-warn no-warn no-warn no-warn"
+    "email email email email email"
+    "pass pass pass pass pass"
+    "repass repass repass repass repass"
+    "button button button button button";
+    grid-gap: 5px;
+    width: 400px;
+    /* border: 2px solid red; */
+    margin-left: 18%;
+    font-family: "Open Sans", Arial;
+    font-size: small;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+
+}
+
+#daftar-form div{
+    width: 100%;
+}
+
+#logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#logo img{
+    width: 70px;
+}
+
+#caption{
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    position: relative;
+}
+
+input{
+    padding: 5px 5px 5px 0;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid silver;
+    font-size: medium;
+}
+
+input:focus{
+    outline: none;
+}
+
+input + span{
+    margin-top: -1px;
+    z-index: 100;
+    right    : 50%;
+    z-index: 100;
+    bottom  : 0;
+    width  : 0%;
+    height   : 2px;  
+    background: #23adaf;
+    transition: 0.5s;
+}
+
+input:focus + span{
+    width: 100%;
+}
+
+.eye{
+    position: absolute;
+    right: 0;
+    transform: translate(3px, -3px);;
+}
+
+.pass-error{
+    color: red;
+    display: none;
+}
+#number-warning{
+    grid-area: no-warn;
+    color: rgb(255, 217, 0);
+}
+
+[type="checkbox"]{
+    position: absolute;
+    right: 0;
+    width: fit-content;
+    transform: scale(1.6);
+    opacity: 0;
+}
+
+button#submit{
+    grid-area: button;
+    width: 100%;
+    color: white;
+    background-color: #23adaf;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+button#submit:hover{
+    background-color: #1d9193;
+}
+
+#logo{grid-area: logo;}
+#caption{grid-area: caption;}
+.form-item:nth-child(3){grid-area: nama;}
+.form-item:nth-child(4){grid-area: kode;}
+.form-item:nth-child(5){grid-area: telepon;}
+.form-item:nth-child(7){grid-area: email;}
+.form-item:nth-child(8){grid-area: pass;}
+.form-item:nth-child(9){grid-area: repass;}
+
+@media screen and (max-width: 768px) {
+    #page{
+        display: grid;
+        place-items: center;
+    }
+    #daftar-form{
+        margin-left: 0;
+    }
+}

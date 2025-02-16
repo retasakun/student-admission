@@ -1,0 +1,1097 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@300;500&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../../assets/bg-batik-light.png);
+    background-size: 50%;
+    background-repeat: repeat;
+    position: relative;
+    width: 100vw;
+}
+
+#page{
+    width: 100vw;
+    position: relative;
+}
+#page2{
+    width: 100%;
+    position: relative;
+}
+
+#bg-horizontal{
+    width: 100%;
+    height: 160px;
+    z-index: -3;
+}
+
+#headbar{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+#headbar img{
+    height: 3rem;
+    opacity: 0.4;
+    margin-right: 1rem;
+}
+
+#headbar h5{
+    color: white;
+    font-family: "Roboto", Arial;
+    font-style: italic;
+    letter-spacing: -1px;
+}
+
+#language{
+    margin-left: auto;
+    margin-right: 3rem;
+    padding: 0.5rem;
+    color: white;
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 5px;
+    background-color: #00000000;
+}
+
+#language *{
+    color: gray;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+#sidebar{
+    width: 15rem;
+    max-height: 100vh;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 5rem;
+    height: 200vh;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 3px 0 7px rgba(128, 128, 128, 0.413);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans";
+    transition: 0.5s ease-in-out;
+}
+
+#profile{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 3rem 3rem 1rem 3rem;
+}
+
+
+#profile span{
+    width: 6rem;
+    height: 6rem;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    padding: -3px;
+    outline: 5px solid #23adaf;
+}
+#profile h6{
+    margin-top: -4px;
+    padding: 3px;
+    background-color: #23adaf;
+    color: white;
+    border-radius: 5px;
+}
+
+#profile img{
+    transition: 0.5s;
+    width: 100%;
+}
+
+#submit-status{
+    width: 100%;
+    color: white;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+}
+
+#submit-status a{
+    text-decoration: none;
+    color: white;
+}
+
+#submit-status span{
+    padding: 3px;
+    margin: 0 5px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: smaller;
+}
+
+#peserta{
+    font-family: "Open Sans";
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#peserta h3, #peserta h6{
+    font-weight: 300;
+}
+
+#peserta h3{
+    display: flex;
+    align-items: center;
+}
+
+#peserta h3 i{
+    margin-left: 0.5rem;
+}
+
+#peserta h3 + div{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.281);
+    transform-origin: 0px 0px;
+    height: 0px;
+    padding: 0;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+#peserta h3 + div:hover{
+    height: fit-content;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+#peserta h3 + div button, #peserta h3 + div a{
+    background-color: white;
+    border: none;
+    padding: 1rem;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+#peserta h3 + div a:nth-child(2){
+    color: red;
+    display: block;
+    font-size: small;
+    text-decoration: none;
+}
+
+#peserta h3 + div a:nth-child(2):hover{
+    color: rgb(255, 92, 92);
+    background-color: aliceblue;
+    font-weight: bold;
+}
+
+#peserta h3 + div button:hover:nth-child(1){
+    background-color: aliceblue;
+    color: #23adaf;
+}
+
+#peserta h3:hover + div{
+    height: fit-content;
+    padding: 0.4rem;
+    /* border: 1px solid gray; */
+}
+
+#menu-title{
+    width: 100%;
+    padding: 2rem 2rem 0.5rem 2rem;
+}
+
+#menu-title h5{
+    color: #23adaf;
+}
+
+#sidebar-option{
+    width: 100%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+#sidebar-option button{
+    font-family: "Open Sans", Arial;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 3rem;
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    color: #2d2d2d;
+}
+
+#sidebar #toggle-sidebar{
+    position: absolute;
+    background-color: white;
+    width: 2rem;
+    right: -1.9rem;
+    top: 3rem;
+    text-align: center;
+    box-shadow: 4px 0 3px rgba(128, 128, 128, 0.413);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: "FontAwesome";
+}
+
+#sidebar #toggle-sidebar span{
+    transition: 0.3s;
+}
+
+#sidebar-option button:hover , #sidebar-option button.active {
+    color: #23adaf;
+    font-weight: 500;
+    background-color: aliceblue;
+}
+
+
+#sidebar-option button span{
+    margin-right: 7px;
+}
+
+/* sidebar-mini */
+.mini-sidebar{
+    width: 5rem !important;
+    left: 0px !important;
+}
+
+.mini-sidebar #profile{
+    padding: 0 !important;
+    padding-top: 3rem !important;
+}
+
+.mini-sidebar #profile span{
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid #23adaf;
+}
+
+.mini-sidebar #profile h6{
+    opacity: 0;
+}
+
+.mini-sidebar #peserta{
+    display: none;
+}
+
+.mini-sidebar #menu-title{
+    font-size: large;
+    padding: 1rem 0 !important;
+    text-align: center;
+}
+
+.mini-sidebar #sidebar-option button{
+    padding: 1rem !important;
+    display: grid;
+    place-items: center;
+}
+
+.mini-sidebar #sidebar-option button span:nth-child(2){
+    display: none;
+}
+
+#toggle-sidebar .material-symbols-outlined{
+    transition: 0.3s;
+    transform: rotateZ('180deg') !important;
+}
+
+.wider-content{
+    margin-left: 7rem !important;
+}
+
+/* sidebar-mini end */
+
+#navigation{
+    margin-top: -5rem;
+    margin-right: 4rem;
+    margin-left: 17rem;
+    margin-bottom: 2rem;
+    height: 3rem;
+    width: auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Open Sans", Arial;
+}
+
+#navigation h4{
+    text-shadow: 2px 1px 1px #525252 ;
+}
+
+#navigation h5{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-weight: 300;
+}
+
+#content{
+    margin-top: -2rem;
+    margin-right: 4rem;
+    margin-left: 17rem;
+    z-index: 3;
+    background-color: white;
+    width: auto;
+    min-height: 100vh;
+    box-shadow: 0 0 5px gray;
+    border-radius: 10px;
+    position: relative;
+    padding: 2rem 4rem;
+    font-family: "Open Sans";
+    color: #2d2d2d;
+    transition: 0.5s;
+}
+
+#beranda{
+    display: flex;
+    
+}
+
+#beranda img{
+    width: 30vw;
+}
+
+#beranda div:nth-child(2) img{
+    margin: 2rem;
+}
+
+#beranda #tutor-cbt{
+    display: flex;
+    justify-content: center;
+}
+
+#beranda iframe{
+    width: 100% ;
+}
+
+#beranda h1{
+    font-size: 2rem;
+    color: #23adaf;
+}
+
+#beranda ol{
+    margin-left: 2rem;
+    text-indent: 0.5rem;
+}
+
+/* Data Diri */
+
+.md-stepper-horizontal {
+	display:table;
+	width:100%;
+	margin:0 ;
+	background-color:#FFFFFF;
+    font-family: "Open Sans", Arial;
+}
+.md-stepper-horizontal .md-step {
+	display:table-cell;
+	position:relative;
+	padding:24px;
+}
+.md-stepper-horizontal .md-step:hover,
+.md-stepper-horizontal .md-step:active {
+	background-color:rgba(0,0,0,0.04);
+}
+.md-stepper-horizontal .md-step:active {
+	border-radius: 15% / 75%;
+}
+.md-stepper-horizontal .md-step:first-child:active {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.md-stepper-horizontal .md-step:last-child:active {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.md-stepper-horizontal .md-step:hover .md-step-circle {
+	background-color:#757575;
+}
+.md-stepper-horizontal .md-step:first-child .md-step-bar-left,
+.md-stepper-horizontal .md-step:last-child .md-step-bar-right {
+	display:none;
+}
+.md-stepper-horizontal .md-step .md-step-circle {
+	width:60px;
+	height:60px;
+	margin:0 auto;
+	background-color:#999999;
+	border-radius: 50%;
+	text-align: center;
+	line-height:60px;
+	font-size: 24px;
+	font-weight: 600;
+	color:#FFFFFF;
+    display: grid;
+    place-items: center;
+    border: none;
+}
+
+.fa-x{
+    color: red;
+    font-weight: 400;
+    font-size: 3rem;
+    position: absolute;
+    left: 55%;
+    top: 0.5rem;
+    display: none;
+}
+
+.md-stepper-horizontal.green .md-step.active .md-step-circle {
+	background-color:#00AE4D;
+}
+.md-stepper-horizontal.orange .md-step.active .md-step-circle {
+	background-color:#23adaf;
+}
+.md-stepper-horizontal .md-step.active .md-step-circle {
+	background-color: #2196f3;
+}
+.md-stepper-horizontal .md-step.data-siswa .md-step-circle:before {
+	font-family:'FontAwesome';
+	font-weight:100;
+	content: "\f007";
+}
+.md-stepper-horizontal .md-step.data-siswa .md-step-circle *,
+.md-stepper-horizontal .md-step.editable .md-step-circle * {
+	display:none;
+}
+.md-stepper-horizontal .md-step.wali .md-step-circle {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+.md-stepper-horizontal .md-step.wali .md-step-circle:before {
+	font-family:'Material Icons';
+	font-weight:100;
+	content: "\f1a2";
+}
+.md-stepper-horizontal .md-step .md-step-title {
+	margin-top:16px;
+	font-size:16px;
+	font-weight:600;
+}
+.md-stepper-horizontal .md-step .md-step-title,
+.md-stepper-horizontal .md-step .md-step-optional {
+	text-align: center;
+	color:rgba(0,0,0,.26);
+}
+
+.md-stepper-horizontal .md-step .md-step-status{
+    text-align: center;
+    color: red;
+    display: none;
+}
+
+.md-stepper-horizontal .md-step.active .md-step-title {
+	font-weight: 600;
+	color:rgba(0,0,0,.87);
+}
+.md-stepper-horizontal .md-step.active.done .md-step-title,
+.md-stepper-horizontal .md-step.active.editable .md-step-title {
+	font-weight:600;
+}
+
+.md-stepper-horizontal .md-step.active .md-step-optional {
+	color:rgba(0,0,0,.54);
+}
+.md-stepper-horizontal .md-step .md-step-bar-left,
+.md-stepper-horizontal .md-step .md-step-bar-right {
+	position:absolute;
+	top:48px;
+	height:1px;
+    z-index: 0;
+	border-top:3px solid #DDDDDD;
+}
+.md-stepper-horizontal .md-step .md-step-bar-right {
+	right:0;
+	left:70%;
+	margin-left:20px;
+}
+.md-stepper-horizontal .md-step .md-step-bar-left {
+	left:0;
+	right:70%;
+	margin-right:20px;
+}
+
+.md-stepper-horizontal .md-step.sekolah .md-step-circle:before {
+	font-family:'FontAwesome';
+	font-weight:100;
+	content: "\f549";
+}
+
+.md-stepper-horizontal .md-step.open{
+    background-color:rgba(0,0,0,0.04);
+    border-radius: 15% / 75%;
+}
+
+
+.md-step.not-complete .md-step-status{
+    display: block;
+}
+
+.md-step.not-complete .md-step-circle {
+    background-color: red !important;
+}
+
+.md-step.not-complete .fa-x{
+    display: block;
+}
+
+
+/* data-siswa */
+#biodata{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: "Open Sans", Arial;
+    width: 100%;
+}
+
+#biodata img{
+    align-self: center;
+    width: 100px;
+}
+
+#biodata th[colspan="2"]{
+    background-color: #eefafa;
+    padding-left: 6rem;
+    border-bottom: 1px solid gray;
+    padding-top: 1ch;
+}
+
+#biodata table{
+    border-collapse: collapse;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+#biodata table tr:nth-child(even){
+    background-color: #eefafa;
+}
+
+#biodata table th, td{
+    text-align: left;
+    /* border: 2px solid gray; */
+    padding: 1rem;
+}
+
+#data-diri form img{
+    max-width: 200px;
+    max-height: 400px;
+}
+
+#biodata table th{
+    text-align: right;
+    width: 20%;
+}
+
+#biodata table th[colspan="2"]{
+    text-align: left;
+}
+
+#foto-profil{
+    width: 100%;
+    display: none; /*flex*/
+    flex-direction: column;
+    background-color: #f0f4f4;
+    padding: 1rem;
+}
+
+#foto-profil.show{
+    display: flex;
+}
+
+#foto-profil ul{
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+.btn-edit{
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    font-size: medium;
+    font-family: "Open Sans", Arial;
+    color: white;
+    background-color: #23adaf;
+    box-shadow: 1px 1px 3px #80808069;
+    margin: 5px 0;
+    max-width: 250px;
+    min-width: 200px;
+}
+
+.btn-edit:hover{
+    background-color: #1c9c9e;
+    border-bottom: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-left: 1px solid #2d2d2d;
+    border-top: 1px solid #2d2d2d;
+}
+
+.div-edit{
+    width: 100%;
+}
+
+
+#data-sekolah-asal{
+    width: 100%;
+}
+
+  /* form box */
+  #form-data{
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+    display: grid;
+    place-items: center;
+    background-color: #75757542;
+    font-family: "Open Sans";
+    transition: 0.5s;
+}
+
+#form-data.show{
+    right: 0 !important;
+}
+
+.box-form{
+    min-width: 320px;
+    width: 500px;
+    top: 100px;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+    padding-bottom: 6rem;
+    background-color: white;
+    box-shadow: 0 0 3px gray;
+}
+
+.form-section-title{
+    width: 100%;
+    background-color: #d9f4f4;
+}
+
+.box-form ul{
+    margin-left: 1rem;
+}
+
+.box-form label{
+    font-weight: 500;
+}
+
+.box-form [type='checkbox']{
+    margin: 0 1rem;
+    transform: scale(1.8);
+}
+
+.box-form [type='checkbox']:checked{
+    background-color: #23adaf;
+    color: #23adaf;
+}
+
+.box-form input, .box-form select{
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.box-form input:hover, .box-form select:hover{
+    border-bottom: 2px solid #23adaf;
+}
+
+.box-form input:focus, .box-form select:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #23adaf;
+}
+
+.box-form .form-row{
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.box-form .form-row.radio{
+    justify-content: flex-start;
+}
+
+.box-form .form-row.radio .form-col{
+    margin-right: 2rem;
+}
+
+.box-form label{
+    margin-top: 2rem;
+}
+
+.close-box-form{
+    font-size: large;
+    margin-left: auto;
+    padding: 0.6rem;
+    font-weight: 500;
+    border-radius: 10px;
+
+}
+
+.close-box-form:hover{
+    background-color: #8f8f8f;
+}
+
+.submit-box-form{
+    font-size: large;
+    color: white;
+    background-color: #23adaf;
+    border: none;
+    padding: 0.6rem;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-left: 2rem;
+}
+
+.submit-box-form:hover{
+    background-color: #198a8c;
+}
+
+
+input:disabled{
+    opacity: 0.5;
+}
+
+.orang-tua-nonaktif input,
+.orang-tua-nonaktif select,
+.orang-tua-nonaktif label{
+    display: none;
+}
+
+#statusAyah, #statusIbu,
+label[for="statusAyah"],label[for="statusIbu"]{
+    display: block;
+}
+.msg-ortu-nonaktif{
+    color: rgb(255, 196, 0);
+    display: none;
+}
+.orang-tua-nonaktif .msg-ortu-nonaktif{
+    display: block;
+}
+
+#persyaratan{
+    margin-top: 5rem;
+    width: 100%;
+}
+
+#pilihan-jurusan{
+    margin-top: 1rem;
+}
+
+#pilihan-jurusan form{
+    width: 100%;
+}
+
+#pilihan-jurusan div{
+    display: flex;
+}
+
+#pilihan-jurusan form .pilihan{
+    width: 100%;
+    height: fit-content;
+    outline: 1px solid #535858;
+    border-radius: 10px;
+    display: flex;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #1c9c9e; 
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin-bottom: 1rem;
+    border-bottom: 4px solid #535858;
+    border-right: 4px solid #535858; 
+    text-align: left;
+}
+
+
+#pilihan-jurusan form input{
+    width: 1.5rem;
+    margin-right: 1rem;
+}
+
+#pilihan-jurusan form .pilihan:has(input:checked){
+    background-color: #1c9c9e;
+    color: whitesmoke;
+    outline: 2px solid #17888a;
+    border-top: 4px solid #17888a;
+    border-left: 4px solid #17888a;
+    border-bottom: none;
+    border-right: none; 
+} 
+
+#pilihan-jurusan button{
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    margin: 2rem;
+    color: white;
+    background-color: #1c9c9e;
+    box-shadow: 1px 2px 2px gray;
+}
+
+#pilihan-jurusan form input:checked  + label{
+    border: 5px solid rgb(59, 253, 0);
+    background-color: #1c9c9e59;
+}
+
+#persyaratan table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+#persyaratan button.delete{
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: medium;
+}
+
+#persyaratan button.upload{
+    color: white;
+    background-color: #23adaf;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: medium;
+}
+#persyaratan button:hover{
+    filter: brightness(0.8);
+    color: rgb(226, 226, 226);
+}
+
+
+#hapus-rapor, #hapus-sertif, #hapus-ranking, #hapus-rekap-nilai{
+    height: 50% !important;
+}
+
+#hapus-rapor p, #hapus-ranking p{
+    color: orange;
+}
+
+#ket-berkelakuan-baik tr{
+    background-color: #eff6f7;
+    border-bottom: 2px solid #23adaf
+}
+
+#undangan{
+    background-color: #eff6f7;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#undangan img{
+    width: 80%;
+    margin: 2rem;
+}
+
+#undangan input{
+    background-color: #23adaf;
+}
+
+#undangan input, #undangan select{
+    margin-bottom: 2rem;
+    padding: 0.75rem;
+}
+
+#sertifikat-utama{
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+#sertifikat-utama label{
+    margin-top: 3rem;
+}
+
+#sertifikat-utama input, #sertifikat-utama select{
+    padding: 0.8rem;
+    margin-top: 1rem;
+    width: 80%;
+}
+
+#sertifikat-utama input[type="file"]{
+    background-color: #198a8c85;
+}
+
+#SertifPrestasiUtama{
+    width: 100%;
+    max-height: 400px;
+}
+
+#sertifikat {
+    background-color: #eff6f7;
+    display: none;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+#sertifikat #tambah-sertif{
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    font-size: medium;
+    font-family: "Open Sans", Arial;
+    color: white;
+    background-color: #23adaf;
+    box-shadow: 1px 1px 3px #80808069;
+}
+
+#sertifikat table button{
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: medium;
+}
+
+#sertifikat table tr{
+    border-bottom: 2px solid #23adaf;
+}
+
+#sertifikat table tr:nth-child(odd){
+    background-color: #eff6f7;
+}
+
+#submit-form h2{
+    width: 100%;
+    background-color: rgb(255, 231, 187);
+}
+
+#submit-form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#submit-form #confirm{
+    display: flex;
+}
+
+#submit-form #confirm input{
+    margin: 1rem;
+    transform: scale(1.3);
+}
+
+#submit-form button{
+    background-color: rgb(0, 216, 0);
+    filter: brightness(0.8);
+    color: white;
+    border: none;
+    font-size: 1.4em;
+    border-radius: 7px;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 2px 2px 4px #8080804f;
+}
+
+#submit-form .red, #submit-form a{
+    color: red;
+}
+
+#submit-form .red li{
+     margin: 1rem 1.5rem;
+}
+
+#submit-form button:active{
+    background-color: #007032;
+}
+
+
+#persyaratan #submit-form{
+    padding: 2rem;
+}
+@keyframes animation {
+    from {background-position: -250px 0;}
+    to {background-position: 250px 0;}
+}
+
+#error-bag{
+    color: red;
+}
+
+/* Ganti Password */
+
+#ganti-password h1{
+    margin-top: 1rem;
+}
+
+#ganti-password form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#ganti-password form label{
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#ganti-password form input{
+    font-size: medium;
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 1px solid gray;
+}
+
+#ganti-password form button{
+    margin-top: 1rem;
+    background-color: red;
+}
+
+#ganti-password form span {
+    display: flex;
+}
+
+#ganti-password form span span{
+    width: 40px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: gray;
+    color: white;
+    display: grid;
+    place-items: center;
+    margin-left: -40px;
+}
+
+/* pengumuman kelulusan */
+/*pindah ke lulus.css*/

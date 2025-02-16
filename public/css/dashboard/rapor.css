@@ -1,0 +1,59 @@
+#scroll-rapor{
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+#data-rapor{
+    border-collapse: collapse;
+    border: 2px solid #f0f4f4;
+}
+
+#data-rapor tr:nth-child(odd){
+    background-color: #f0f4f4;
+}
+
+#data-rapor th{
+    max-width: 200px !important;
+}
+
+#data-rapor td, #data-rapor th{
+    max-width: calc(fit-content + 20px) !important;
+    white-space: nowrap;
+    padding: 1rem  !important;
+}
+
+#data-rapor tr .rapor-form{
+    display: none;
+    padding: 0 !important;
+}
+
+#data-rapor tr:has(.rapor-form) td form{
+    margin: 1rem;
+    max-width: 90vw !important;
+}
+
+#data-rapor tr:has(.rapor-form) td form .form-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#data-rapor tr:has(.rapor-form)  p,
+#data-rapor tr:has(.rapor-form)  form ul li,
+#data-rapor tr:has(.rapor-form)  ul a{
+    white-space: wrap;
+}
+
+td:has(#upload-kelakuan-baik){
+    display: none;
+}
+
+#page2 tr.drop td{
+    display: table-cell;
+}
+
+
+#upload-kelakuan-baik{
+    border: 2px solid #f0f4f4;
+}

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+*{
+    font-family: "Roboto", Arial;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(54, 54, 54);
+}
+
+#page{
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fcfcfc;
+}
+
+table{
+    width: 100%;
+}
+
+table#nilai-rapor tr:nth-child(odd){
+    border: 2px solid red;
+    background-color: whitesmoke;
+}
+
+h3{
+    padding: 5px;
+    padding-left: 15px;
+    font-size: larger;
+    background-color: aliceblue;
+}
+
+table th{
+    text-align: right;
+    width: 140px;
+    padding: 5px;
+}
+
+table td{
+    text-align: left;
+    padding: 14px 5px;
+    color: #585858;
+}
+
+table.white{
+    background-color: aliceblue;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+}
+
+header img{
+    width: 95%;
+}
+
+#header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid #23adaf;
+    outline: 2px solid gray; */
+    padding: 5px;
+    background-color: aliceblue;
+}
+
+#header tr:nth-child(2){
+    color: rgb(78, 161, 0);
+}
+
+#header th[colspan="2"]{
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+#header img{
+    width: 150px;
+}
+
+.berkas{
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+img#rapor-img{
+    width: 100%;
+}
+
+.berkas img{
+    width: 95%;
+    border: 2px solid #23adaf;
+}
+
+.berkas embed{
+    margin-left: 0rem;
+    width: 100%; 
+    height: 200%;
+    border: 2px solid #23adaf;
+    zoom: 1.8;
+}
+
+
+.sertif{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sertif img{
+    width: 95%;
+    border: 2px solid #23adaf;
+}
+
+.sertif table{
+    margin-bottom: 2rem;
+    width: 70%;
+    border-collapse: collapse;
+}
+
+.sertif th{
+    padding: 2px;
+    text-align: right;
+    width: 100px;
+    border: 1px solid gray;
+}
+
+.sertif td{
+    border: 1px solid gray;
+    padding: 2px;
+}
+
+#data-ayah [colspan="2"], #data-ibu [colspan="2"], 
+#data-wali [colspan="2"], #data-sekolah-asal [colspan="2"]{
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.not-found{
+    background-color: transparent !important;
+}
+
+.not-found div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 1rem;
+}
+
+.code{
+    margin: 2rem 1rem;
+    color: #da0000;
+}
+.not-found h2{
+    color: #da0000;
+}
+
+.not-found h1{
+    color: #da0000;
+}

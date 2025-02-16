@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@300;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e2ecec;
+}
+
+#nav-brand{
+    width: 100vw;
+    height: 2.5rem;
+    background-color: #7b808c;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+#nav-brand button{
+    padding: 3px;
+    margin-right: 1rem;
+}
+
+#nav-search{
+    height: 3rem;
+    padding: 0.5rem;
+    display: flex;
+    background-color: #d5d7dbff;
+}
+
+#nav-search button{
+    padding: 4px;
+    border: none;
+    background-color: #fafafa;
+    border-radius: 5px;
+    margin-right: 7px;
+}
+
+#nav-search select{
+    padding: 4px;
+    border: none;
+    background-color: #fafafa;
+    border-radius: 5px;
+    margin-right: 7px;
+}
+
+#workpanel{
+    width: 100vw;
+    height: calc(100vh - 8rem);
+    display: flex;
+}
+
+#workpanel #daftar{
+    width: 55%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#workpanel #detail{
+    width: 45%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+
+#daftar table{
+    width: 100%;
+}
+
+#daftar table td{
+    text-align: left;
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#daftar table tr{
+    border-bottom: 1px solid gray;
+}
+
+#daftar table tr.selected{
+    background-color: #b8d8d8;
+}
+
+#daftar table tr:hover{
+    opacity: 0.8;
+    background-color: #d1d6d6;
+}
+
+
+#daftar table td:nth-child(4){
+    width: 4rem;
+    text-align: center;
+}
+
+.saved, .verified{
+    color: rgb(1, 211, 1);
+}
+
+.unverified{
+    color: rgb(199, 186, 0);
+}
+
+.unsaved{
+    color: red;
+}
+
+#nav-detail{
+    background-color: #d5d7dbff;
+    padding: 3px;
+}
+
+#nav-detail button{
+    font-size: 13px;
+    padding: 2px;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+}
+
+#nav-detail button:active{
+    background-color: #7b808c;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+
+#tab-detail{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.tab{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+#data-diri img{
+    width: 8rem;
+    max-height: 12rem;
+    margin: 1rem;
+}
+
+.row{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.tab table {
+    height: fit-content;
+    width: 100%;
+    border-bottom: 4px solid #c8d1d1;
+}
+
+.tab tr{
+    min-height: 3rem;
+}
+
+.tab table tr:nth-child(odd){
+    background-color: #c8d1d1;
+}
+
+.tab td{
+    /* border: 1px solid gray; */
+    border-collapse: collapse;
+    height: 3rem;
+    max-height: 6rem;
+    padding: 0 0.75rem;
+    width: 12rem;
+}
+
+.tab table:nth-child(3) tr:nth-child(1) td:nth-child(2){
+    width: 100%;
+}
+
+/* #data-diri tr td:nth-child(1){
+    width: 12rem;
+}  */
+
+#data-rapor{
+    font-size: 13px;
+}
+
+.img-rapor{
+    width: 7rem;
+    height: 12rem;
+    margin: 7px;
+}
+
+.tabel-prestasi tr td:nth-child(1){
+    width: 20%;
+}
+
+.tabel-prestasi tr td:nth-child(2){
+    padding: 5px;
+}
+
+.container-undangan{
+    display: grid;
+    place-items: center;
+}
+
+.img-undangan{
+    margin: 1rem;
+    max-width: 20rem;
+}
+
+#ket-baik{
+    background-color: #d1d6d6;
+    padding: 1rem;
+}
+
+#pelolosan {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+}
+
+#verifikasi img {
+    height: 230px;
+    padding: 1rem 3rem;
+}
+
+#confirm{
+    background-color: #cedada;
+    padding: 0.3rem;
+}
+
+#verifikasi textarea{
+    padding: 1rem;
+    font-size: large;
+}
+
+#pelolosan button{
+    border-top: 5px solid#7b808c;
+    border-left: 5px solid #7b808c;
+    border-bottom: 5px solid #3e4046;
+    border-right: 5px solid #3e4046;
+}
+
+#pelolosan button:active{
+    border-top: 5px solid#3e4046;
+    border-left: 5px solid #3e4046;
+    border-bottom: 5px solid #7b808c;
+    border-right: 5px solid #7b808c;
+    filter: brightness(0.8);
+}
+
+#confirm div{
+    display: none;
+}
+
+#confirm h3#belum-simpan{
+    color: red;
+}
+
+#loloskan, #confirm-loloskan button{
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border: none;
+    background-color: #7bce00;
+    color: white;
+    border-radius: 10px;
+}
+
+#tidak-loloskan, #confirm-tidak-loloskan button, #verifikasi #status-verif button{
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border: none;
+    background-color: #e70c0c;
+    color: white;
+    border-radius: 10px;
+}
+
+#verifikasi #status-verif button:hover{
+    background-color: #c51919;
+}
+
+#verifikasi #status-verif{
+    background-color: #cedada;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+#berkas-berkas{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#berkas-berkas img{
+    margin: 0.3rem;
+}
+
+#password{
+    padding: 2rem;
+}
+
+#password input{
+    padding: 3px;
+}
+
+#password button{
+    padding: 0.4rem;
+}
+
+#data-ujian{
+    width: 100vw;
+    display: none;
+    align-items: flex-start;
+}
+
+#data-ujian #daftar-ujian{
+    width: 65vw;
+    border-right: 3px solid gray;
+    height: 100%;
+}
+
+#data-ujian table{
+    width: 100%;
+    font-size: 12px;
+}
+
+#data-ujian table tr th:nth-child(2){
+    width: 6rem;
+}
+
+#data-ujian table tr th{
+    border-bottom: 3px solid gray;
+    padding: 5px 0;
+}
+
+#data-ujian table tr td:nth-child(7){
+    color: blue;
+    text-decoration: underline;
+}
+
+#data-ujian table tr td:nth-child(7):hover{
+    cursor: pointer;
+}
+
+
+#data-ujian table tr td:nth-child(7):active{
+    color: rgb(63, 0, 122);
+}
+
+#data-ujian table tr td{
+    border-bottom: 2px solid gray;
+    padding-bottom: 3px;
+}
+
+#setting{
+    padding: 1.3rem;
+}
+
+#setting h5{
+    background-color: #b8d8d8;
+    padding: 3px;
+    font-size: 1.5rem;
+}
+
+#setting a{
+    background-color: green;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px gray;
+}
+
+#statistik{
+    display: none;
+}
+
+#statistik h3{
+    background-color: red;
+    color: white;
+    margin: 4rem;
+    padding: 1rem;
+    height: fit-content;
+}
+
+/* lookup */
+
+.look{
+    cursor: pointer;
+}
+
+.look:hover{
+    filter: brightness(0.95);
+}
+
+#img-lookup{
+    background-color: #7b808c60;
+    display: none;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+}
+
+#img-lookup img{
+    max-width: 80vw;
+    max-height: 100vh;
+}
+
+#close-img{
+    padding: 1rem 0.75rem;
+    box-shadow: 2px 2px 2px gray;
+    border: none;
+    background-color: #c51919;
+    color: white;
+    position: fixed;
+    right: 4rem;
+    top: 2rem;
+}

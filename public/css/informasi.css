@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+@import url('color.css');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+i {
+    margin-right: 6px;
+}
+
+nav {
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+    padding: 1rem 3rem;
+    background-color: var(--secondary-color);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.712);
+    z-index: 5;
+}
+
+
+#nav-brand{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#nav-brand img{
+    width: 4rem;
+    padding: 10px;
+}
+
+#nav-brand #logo-cambridge{
+    width: 3.5rem;
+    grid-area: cam;
+}
+
+#nav-brand #logo-man{
+    grid-area: man;
+}
+
+#nav-brand #logo-kemenag{
+    grid-area: kem;
+}
+
+#nav-brand h1{
+    grid-area: brand;
+    white-space: nowrap;
+}
+
+
+#nav-options{
+    display: flex;
+    justify-self: flex-end;
+    justify-content: space-between;
+    width: 50%;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    align-items: center;
+    align-self: center;
+}
+
+#nav-options a{
+    text-decoration: none;
+    margin: 0 2rem;
+    color: white;
+}
+
+#nav-options a:hover{
+    color: #922011;
+}
+
+#welcome {
+    padding: 5rem;
+    width: 100vw;
+    height: 80vh;
+    background-size: cover;
+    background-image: url("../assets/man-sky.jpg");
+    margin-top: 5rem;
+    display: grid;
+    place-items: center;
+}
+
+
+#welcome > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    color: white;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 2px var(--secondary-color);
+    animation: bottomTop 1.2s ;
+}
+
+#welcome h1 span{
+    white-space: nowrap;
+}
+
+#welcome img{
+    width: 8rem;
+    margin: 1rem;
+}
+
+#welcome > div > h1{
+    text-align: center;
+}
+
+#welcome #masuk, #welcome #masuk-belum{
+    padding: 0.8rem 1.2rem;
+    font-size: xx-large;
+    background-color: #922011;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    text-decoration: none;
+    outline: 2px solid white;
+    box-shadow: 2px 4px 5px var(--secondary-color);
+    color: white;
+    transition: 0.4s;
+    margin-top: 4rem;
+    white-space: nowrap;
+}
+
+#welcome #masuk-belum{
+    cursor:not-allowed;
+}
+
+#welcome #masuk:hover{
+    background-color: white;
+    color: #922011;
+    outline: 2px solid #922011;
+}
+
+.sec-content{
+    width: 60%;
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: bottomTop 1.2s ;
+}
+
+.sec-title{
+    margin: 1rem;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.dark-blue{
+    color: var(--secondary-color);
+    text-shadow: 1px 2px 3px var(--bg-color);
+}
+
+.light-blue{
+    color: var(--bg-color);
+    text-shadow: 1px 2px 3px --secondary-color
+}
+
+#info-penting {
+    width: 100vw;
+    min-height: 40vh;
+    padding: 5rem;
+    display: grid;
+    place-items: center;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+
+
+#info-penting > div > p{
+    color: rgb(26, 26, 26);
+}
+ 
+
+.persyaratan{
+    width: 100vw;
+    padding: 5rem;
+    display: grid;
+    place-items: center;
+}
+
+#umum{
+    background-color: var(--primary-color);
+}
+
+#khusus{
+    background-image: url(../assets/bg-batik-light.png);
+    background-size: 50%;
+    background-repeat: repeat;
+}
+
+
+.persyaratan > div > h2{
+    align-self: flex-start;
+    margin-bottom: 1.2rem;
+    margin-top: 2rem;
+}
+
+.persyaratan > div > ol{
+    align-self: flex-start;
+}
+
+#umum > div > *{
+    color: aliceblue;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    line-height: 2;
+}
+
+#khusus {
+    color: var(--secondary-color);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    line-height: 2;
+}
+
+
+#tata-cara-seleksi{
+    background-color: var(--primary-color);
+    display: grid;
+    place-items: center;
+    padding: 5rem;
+}
+
+#tata-cara-seleksi ol{
+    color: var(--bg-color);
+    align-self: flex-start;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    line-height: 2;
+}
+
+#tata-cara-seleksi div > ol li > ol{
+    margin-left: 2rem;
+}
+
+
+#jadwal{
+    display: grid;
+    place-items: center;
+    padding: 5rem;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background-image: url(../assets/bg-batik-light.png);
+    background-size: 50%;
+    background-repeat: repeat;
+}
+
+
+#jadwal table td, #jadwal table th{
+    /* border: 1px solid gray; */
+    padding: 12px 8px;
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    box-shadow: 2px 4px 5px rgba(128, 128, 128, 0.753);
+}
+
+#jadwal table th{
+    background-color: var(--bg-color);
+}
+
+#prosedur{
+    background-color: var(--secondary-color);
+    display: grid;
+    place-items: center;
+    padding: 5rem;
+}
+
+#prosedur ol{
+    color: white;
+    align-self: flex-start;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    line-height: 2;
+}
+
+#prosedur div > ol li > ol{
+    margin-left: 2rem;
+}
+
+#prosedur a{
+    color: yellow;
+}
+
+#prosedur a:visited{
+    color : orange;
+}
+
+#kontak{
+    padding: 5rem;
+    display: grid;
+    place-items: center;
+    background-color: rgb(236, 236, 40);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+#kontak > div {
+    align-items: flex-start;
+}
+
+#kontak h3{
+    margin: 1rem;
+}
+
+footer{
+    width: 100vw;
+    padding: 2rem;
+
+    font-size: large;
+    background-color: rgb(17, 17, 17);
+    color: rgb(235, 235, 235);
+    font-family:  Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#peminatan{
+    background-image: url(../assets/bg-batik-light.png);
+    background-size: 50%;
+    background-repeat: repeat;
+    display: grid;
+    place-items: center;
+    padding: 5rem;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+@keyframes bottomTop{
+    from {
+        opacity: 0%;
+        transform: translateY(10rem);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+

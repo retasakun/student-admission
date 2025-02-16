@@ -1,0 +1,266 @@
+.form-area{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-area label{
+    margin-top: 1rem;
+}
+
+.form-area input, .form-area select{
+    width: 100%;
+    padding: 5px 5px 5px 0;
+    border: none;
+    border-bottom: 1px solid silver;
+    font-size: medium;
+}
+
+.form-area input, .form-area select{
+    outline: none;
+}
+
+.form-area  input + span{
+    margin-top: -1px;
+    z-index: 100;
+    right    : 50%;
+    z-index: 100;
+    bottom  : 0;
+    width  : 0%;
+    height   : 3px;  
+    background: #23adaf;
+    transition: 0.5s;
+    margin-bottom: 1rem;
+}
+
+.form-area input:focus + span{
+    width: 100%;
+}
+
+.form-area .form-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-area .form-col{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.form-area .form-row.radio{
+    width: 100%;
+    justify-content: flex-start !important;
+}
+
+.form-area .form-row.radio .form-col{
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%
+}
+
+.form-area .form-row.radio .form-col label{
+    white-space: wrap;
+    width: 100%;
+    margin: 10px;
+}
+
+.form-area .form-row.radio .form-col input{
+    width: 10%;
+}
+
+.error{
+    background-color: red !important;
+    color: white !important;
+    width: 100% !important;
+    height: fit-content !important;
+}
+
+.alert-success {
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745 !important; /* Green background */
+    color: white; /* White text */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 99999;
+    font-size: 16px;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show the alert when 'show' is true (using Alpine.js) */
+.alert-success[x-show="show"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alert-success .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Add a fade-out effect */
+.alert-success[x-show="false"] {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.rapor-success{
+    padding: 2rem;
+    height: 3rem;
+    background-color: #1aa521;
+    color: white;
+    border-radius: 5px;
+}
+
+.form-area label{
+    white-space: nowrap;
+}
+
+.form-area .form-row.radio [type="radio"]{
+    width: 20px;
+    margin-left: 8px;
+    transform: scale(1.8);
+}
+
+.form-area .button-row{
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.form-area button[role="submit"]{
+    background-color: #1aa521 ;
+    color: white;
+    padding: 0.5rem 1rem ;
+    border: none;
+    border-radius: 5px;
+    justify-self: flex-end;
+    transform: scale(1.1);
+    margin: 0 5px;
+}
+
+.form-area button[role="none"]{
+    background-color: #1b9a9c;
+    color: white;
+    padding: 0.5rem 1rem ;
+    border: none;
+    border-radius: 5px;
+    justify-self: flex-end;
+    transform: scale(1.1);    
+}
+
+
+
+#pilihan-syarat, #pilihan-syarat-akademik{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+    gap: 1rem;
+}
+
+#pilihan-syarat-akademik{
+    display: none ;
+}
+
+#pilihan-syarat button, #pilihan-syarat-akademik button{
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    font-size: medium;
+    font-family: "Open Sans", Arial;
+    color: white;
+    background-color: #23adaf;
+    box-shadow: 1px 1px 3px #80808069;
+}
+
+#pilihan-syarat button.selected, #pilihan-syarat-akademik button.selected{
+    background-color: #01df0c;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+#pilihan-syarat button.fade, #pilihan-syarat-akademik button.fade{
+    opacity: 0.2;
+}
+
+
+#ranking{
+    display: none;
+}
+
+#ranking table{
+    width: 100%;
+    margin-right: 1rem;
+}
+
+#ranking table tr{
+    background-color: #eff6f7;
+    border-bottom: 3px solid #d4e2e4;
+}
+
+#ranking table tr td:nth-child(1){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 40vw;
+}
+
+#ranking table tr a{
+    color: blue;
+}
+
+#upload-ranking input[type='number']{
+    width: 50%;
+    border: 1px solid black;
+}
+
+#upload-ranking input[type='file']{
+    min-height: 32px;
+}
+
+/* loading circle */
+#loading-circle{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #d6d6d6a8;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(131, 131, 131);
+}
+
+#alur-pendaftaran{
+    padding: 1rem;
+}
+
+#alur-pendaftaran img{
+    width: 100%;
+}
+
+footer{
+    width: 100vw;
+    padding: 2rem;
+    margin-top: auto;
+    font-size: large;
+    background-color: rgb(17, 17, 17);
+    color: rgb(235, 235, 235);
+    font-family:  Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
