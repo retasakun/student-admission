@@ -36,7 +36,7 @@ class UserLogin extends Component
             // }
 
             // return $this->redirectRoute('dashboard');
-            return redirect()->to('dashboard');
+            return redirect()->to('/dashboard');
         }else{
             session()->flash('fail', 'email atau password salah!');
         }

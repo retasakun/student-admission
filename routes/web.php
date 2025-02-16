@@ -169,9 +169,8 @@ Route::get('/auth/register', function () {
 });
 
 Route::get('/dashboard', function(){
-
     return view('dashboard.dashboard');
-})->name('dashboard');
+});
 
 Route::get('/tes', function(){
     dd(App\Services\Complete::isSubmitable());
